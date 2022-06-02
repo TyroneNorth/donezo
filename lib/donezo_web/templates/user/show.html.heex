@@ -1,0 +1,8 @@
+<h1>
+    Welcome <%= @user.email %>
+</h1>
+
+
+
+<span><%= link "Tasks", to: Routes.user_task_path(@conn, :index, @conn.assigns.current_user.id) %></span> |
+<span><%= link "Settings", to: Routes.user_settings_path(@conn, :edit) %></span>

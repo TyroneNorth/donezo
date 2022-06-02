@@ -1,0 +1,36 @@
+<h1>Listing Tasks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Items</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for task <- @tasks do %>
+
+    <tr>
+      <td><%= task.title %></td>
+      <td><%= hd task.items %>...(<%= length(task.items) %>)</td>
+
+      <td>
+        <span><%= link "Show", class: "bi-eye", to: Routes.user_task_path(@conn, :show, task.user_id, task.id) %></span>
+        <span ><%= link "Edit", class: "bi-pencil", to: Routes.user_task_path(@conn, :edit, task.user_id, task.id) %></span>
+        <span ><%= link "Delete", class: "bi-x-circle", to: Routes.user_task_path(@conn, :delete, task.user_id, task.id), method: :delete, data: [confirm: "Are you sure?"] %></span>
+
+      </td>
+
+
+
+    </tr>
+<% end %>
+
+  </tbody>
+</table>
+
+
+
+<span ><%= link "New Task", to: Routes.user_task_path(@conn, :new, @conn.assigns.current_user.id), class: "button is-link is-light has-text-danger" %></span>
