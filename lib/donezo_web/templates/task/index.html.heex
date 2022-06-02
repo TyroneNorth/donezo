@@ -14,16 +14,24 @@
 
     <tr>
       <td><%= task.title %></td>
-      <td><%= hd task.items %>...(<%= length(task.items) %>)</td>
-
-      <td>
-        <span><%= link "Show", class: "bi-eye", to: Routes.user_task_path(@conn, :show, task.user_id, task.id) %></span>
-        <span ><%= link "Edit", class: "bi-pencil", to: Routes.user_task_path(@conn, :edit, task.user_id, task.id) %></span>
-        <span ><%= link "Delete", class: "bi-x-circle", to: Routes.user_task_path(@conn, :delete, task.user_id, task.id), method: :delete, data: [confirm: "Are you sure?"] %></span>
-
-      </td>
 
 
+
+      <td><div class="columns">
+
+  <div class="column is-one-quarter">
+    <%= hd task.items %>...(<%= length(task.items) %>)
+  </div>
+  <div class="column">
+    <%= link "Show", class: "bi-eye-fill", to: Routes.user_task_path(@conn, :show, task.user_id, task.id) %>
+  </div>
+  <div class="column">
+    <%= link "Edit", class: "bi-pencil-fill", to: Routes.user_task_path(@conn, :edit, task.user_id, task.id) %>
+  </div>
+  <div class="column">
+    <%= link "Delete", class: "bi-x-circle-fill", to: Routes.user_task_path(@conn, :delete, task.user_id, task.id), method: :delete, data: [confirm: "Are you sure?"] %>
+  </div>
+</div></td>
 
     </tr>
 <% end %>
@@ -33,4 +41,15 @@
 
 
 
-<span ><%= link "New Task", to: Routes.user_task_path(@conn, :new, @conn.assigns.current_user.id), class: "button is-link is-light has-text-danger" %></span>
+
+
+
+
+
+
+
+
+
+
+
+<span ><%= link "New Task", to: Routes.user_task_path(@conn, :new, @conn.assigns.current_user.id), class: "button is-link is-light has-text-primary" %></span>
