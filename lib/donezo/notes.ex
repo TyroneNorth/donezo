@@ -17,8 +17,10 @@ defmodule Donezo.Notes do
       [%Task{}, ...]
 
   """
-  def list_tasks do
-    Repo.all(Task)
+  def list_tasks(id) do
+    Task
+    |> where(user_id: ^id)
+    |> Repo.all()
   end
 
   @doc """

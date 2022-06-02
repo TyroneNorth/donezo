@@ -5,7 +5,7 @@ defmodule DonezoWeb.TaskController do
   alias Donezo.Notes.Task
 
   def index(conn, _params) do
-    tasks = Notes.list_tasks()
+    tasks = Notes.list_tasks(conn.assigns.current_user.id)
     render(conn, "index.html", tasks: tasks)
   end
 
