@@ -5,13 +5,13 @@
     </div>
   <% end %>
 
-  <div class="form-group">
+  <div class="form-group container">
 
-  <%= label f, :title %>
-  <%= text_input f, :title%>
+  <%= label f, :title, class: "is-size-3" %>
+  <%= text_input f, :title, class: "input is-primary"%>
   <%= error_tag f, :title %>
 
-  <%= label f, :items, class: "control-label" %>
+  <%= label f, :items, class: "control-label is-size-3" %>
   <%= array_input f, :items %>
   <%= array_add_button f, :items %>
   <%= error_tag f, :items %>

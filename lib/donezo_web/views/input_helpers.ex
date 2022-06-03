@@ -8,7 +8,7 @@ defmodule DonezoWeb.InputHelpers do
 
     content_tag :ol,
       id: container_id(id),
-      class: "input_container",
+      class: "is-justify-content-flex-start",
       data: [index: Enum.count(values)] do
       values
       |> Enum.with_index()
@@ -39,11 +39,11 @@ defmodule DonezoWeb.InputHelpers do
       container: container_id(id)
     ]
 
-    link("Add item", to: "#", data: data, class: "add-form-field")
+    link("", to: "#", data: data, class: "add-form-field bi-plus-circle-fill is-size-2")
   end
 
   defp form_elements(form, field, value, index) do
-    type = Phoenix.HTML.Form.input_type(form, field)
+    _type = Phoenix.HTML.Form.input_type(form, field)
     id = Phoenix.HTML.Form.input_id(form, field)
     new_id = id <> "_#{index}"
 
@@ -51,13 +51,13 @@ defmodule DonezoWeb.InputHelpers do
       name: new_field_name(form, field),
       value: value,
       id: new_id,
-      class: "form-control"
+      class: "form-control textarea is-primary is-medium"
     ]
 
-    content_tag :li do
+    content_tag :li, class: "columns ml-1", style: "width: 99.5%;" do
   [
-    apply(Phoenix.HTML.Form, type, [form, field, input_opts]),
-    link("Delete", to: "#", data: [id: new_id], title: "Remove", class: "remove-form-field")
+    apply(Phoenix.HTML.Form, :textarea, [form, field, input_opts]),
+    link("", to: "#", data: [id: new_id], title: "Remove", class: "remove-form-field bi-x-circle-fill is-size-2 level ml-3")
    ]
  end
   end
