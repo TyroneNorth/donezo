@@ -19,7 +19,7 @@ Ready to run in production? Please [check our deployment guides](https://hexdocs
   * Docs: https://hexdocs.pm/phoenix
   * Forum: https://elixirforum.com/c/phoenix-forum
   * Source: https://github.com/phoenixframework/phoenix
-  
+
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-0.2-blue.svg?cacheSeconds=2592000" />
   <a href="https://twitter.com/MrTyroneNorth" target="_blank">
@@ -39,7 +39,7 @@ Ready to run in production? Please [check our deployment guides](https://hexdocs
 
 * Twitter: [@MrTyroneNorth](https://twitter.com/MrTyroneNorth)
 * Github: [@tyronenorth](https://github.com/tyronenorth)
-* LinkedIn: [@TyroneNorth](https://linkedin.com/in/TyroneNorth)
+* LinkedIn: [@TyroneNorth](https://linkedin.com/in/tyrone-north)
 
 ## Show your support
 
