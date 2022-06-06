@@ -8,15 +8,15 @@
   <% end %>
 
   <%= label f, :email %>
-  <%= email_input f, :email, required: true %>
+  <span class="bi-person-fill"><%= email_input f, :email, required: true %></span>
   <%= error_tag f, :email %>
 
   <%= label f, :password %>
-  <%= password_input f, :password, required: true %>
+  <span class="bi-incognito"><%= password_input f, :password, required: true %></span>
   <%= error_tag f, :password %>
 
   <div>
-    <%= submit "Register" %>
+    <%= submit "Register", class: "button is-link is-light has-text-primary" %>
   </div>
 </.form>
 

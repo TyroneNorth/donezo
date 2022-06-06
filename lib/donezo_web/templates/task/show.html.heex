@@ -1,20 +1,20 @@
 <h1>Show Task</h1>
 
-<ul>
+<ul role="list">
 
-  <li>
-    <strong>Title:</strong>
+  <p class="title">
+
     <%= @task.title %>
-  </li>
+  </p>
 
-  <li>
-    <strong>Items:</strong>
+  <p class="block">
+
     <%= for item <- @task.items do %>
-      <li><%= item %></li>
+      <li data-icon="🦄" class="has-text-center ml-6 list-item"><%= item %></li>
     <% end %>
 
 
-  </li>
+  </p>
 
 </ul>
 

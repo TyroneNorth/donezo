@@ -14,16 +14,23 @@
       <section class="container">
         <nav>
           <ul>
-            <li><a href="https://hexdocs.pm/phoenix/overview.html">Get Started</a></li>
+
             <%= if function_exported?(Routes, :live_dashboard_path, 2) do %>
               <li><%= link "LiveDashboard", to: Routes.live_dashboard_path(@conn, :home) %></li>
             <% end %>
           </ul>
           <%= render "_user_menu.html", assigns %>
         </nav>
-        <a href="https://phoenixframework.org/" class="phx-logo">
-          <img src={Routes.static_path(@conn, "/images/phoenix.png")} alt="Phoenix Framework Logo"/>
-        </a>
+          <div class="columns is-mobile">
+          <div class="column">
+
+          <a href="/">
+            <img class="image is-128x128" src={Routes.static_path(@conn, "/images/task-away.png")} alt="Donezo"/>
+
+          </a>
+          </div>
+          </div>
+
       </section>
     </header>
     <%= @inner_content %>

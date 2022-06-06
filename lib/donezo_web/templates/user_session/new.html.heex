@@ -8,16 +8,16 @@
   <% end %>
 
   <%= label f, :email %>
-  <span class="bi-person"><%= email_input f, :email, required: true %></span>
+  <span class="bi-person-fill"><%= email_input f, :email, required: true, placeholder: "test@test.com" %></span>
 
   <%= label f, :password %>
-  <%= password_input f, :password, required: true %>
+  <span class="bi-incognito"><%= password_input f, :password, required: true, placeholder: "passwordisLong1!" %></span>
 
   <%= label f, :remember_me, "Keep me logged in for 60 days" %>
   <%= checkbox f, :remember_me %>
 
   <div>
-    <%= submit "Log in" %>
+    <%= submit "Log in", class: "button is-link is-light has-text-primary" %>
   </div>
 </.form>
 
